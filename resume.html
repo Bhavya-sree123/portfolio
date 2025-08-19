@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+    .resume-container {
+      background: #fff;
+      padding: 25px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Certificates grid */
+    .certificates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .cert-card {
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+      background: #fafafa;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+    .cert-card img {
+      width: 100%;
+      max-height: 96px;
+      object-fit: contain;
+      margin-bottom: 8px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 6px;
+    }
+    .cert-card h3 {
+      font-size: 16px;
+      margin: 6px 0 2px;
+      color: #333;
+    }
+    .cert-card p {
+      font-size: 14px;
+      color: #666;
+      margin: 0 0 6px;
+    }
+    .cert-card small {
+      display: block;
+      font-size: 12px;
+      color: #888;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 16px 0 24px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="resume-container">
+  <h1>BHAVYASREE BEZAWADA</h1>
+  <p>Email: bezawadabbhavyasree@gmail.com | Phone: 924741XXXX</p>
+  <p>Location: Vijayawada, AP</p>
+  <p>GitHub:
+    <a href="https://github.com/Bhavya-sree123" target="_blank" rel="noopener">
+      github.com/Bhavya-sree123
+    </a>
+  </p>
+
+  <hr>
+
+  <h2>Career Objective</h2>
+  <p>
+    To gain practical experience in frontend development and contribute to meaningful student-focused projects while enhancing my skills in web technologies.
+  </p>
+
+  <h2>Education</h2>
+  <p><strong>B.Tech in CSE-AIML</strong><br>
+  SRK Institute of Technology, Vijayawada <br>
+  2nd Year | Expected Graduation: 2028</p>
+
+  <h2>Skills</h2>
+  <ul>
+    <li>HTML5, CSS3, JavaScript (Basic)</li>
+    <li>Python, Java, C (Basics)</li>
+    <li>Responsive Design (Media Queries, Flexbox)</li>
+    <li>Git & GitHub (Beginner level)</li>
+  </ul>
+
+  <h2>Projects</h2>
+
+  <p><strong>1. To-Do List Web App</strong></p>
+  <ul>
+    <li>Built a task list app using HTML, CSS, and JavaScript</li>
+    <li>Allows adding, deleting, and marking tasks</li>
+    <li><a href="https://github.com/Bhavya-sree123/portfolio/blob/main/to-do-list.html" target="_blank" rel="noopener">GitHub Project Link</a></li>
+  </ul>
+
+  <p><strong>2. Portfolio Website</strong></p>
+  <ul>
+    <li>Created a personal portfolio with sections like About, Projects, and Resume</li>
+    <li>Styled with HTML/CSS and mobile responsive layout</li>
+    <li><a href="https://github.com/Bhavya-sree123/portfolio" target="_blank" rel="noopener">GitHub Project Link</a></li>
+  </ul>
+
+  <h2>Certificates</h2>
+  <div class="certificates">
+    <!-- Great Learning — HTML -->
+    <div class="cert-card">
+      <a href="https://www.mygreatlearning.com/certificate/IFGCRBVK" target="_blank" rel="noopener" aria-label="Open Great Learning HTML certificate">
+        <img loading="lazy" src="https://www.mygreatlearning.com/wp-content/themes/great-learning/images/logo.svg" alt="Great Learning logo">
+        <h3>HTML</h3>
+        <p>Great Learning</p>
+        <small>View issued certificate</small>
+      </a>
+    </div>
+    <!-- Great Learning — CSS -->
+    <div class="cert-card">
+      <a href="https://www.mygreatlearning.com/certificate/RPEVLOXQ" target="_blank" rel="noopener" aria-label="Open Great Learning CSS certificate">
+        <img loading="lazy" src="https://www.mygreatlearning.com/wp-content/themes/great-learning/images/logo.svg" alt="Great Learning logo">
+        <h3>CSS</h3>
+        <p>Great Learning</p>
+        <small>View issued certificate</small>
+      </a>
+    </div>
+    <!-- Great Learning — C Programming -->
+    <div class="cert-card">
+      <a href="https://www.mygreatlearning.com/certificate/IIAOPOXY" target="_blank" rel="noopener" aria-label="Open Great Learning C Programming certificate">
+        <img loading="lazy" src="https://www.mygreatlearning.com/wp-content/themes/great-learning/images/logo.svg" alt="Great Learning logo">
+        <h3>C Programming</h3>
+        <p>Great Learning</p>
+        <small>View issued certificate</small>
+      </a>
+    </div>
+    <!-- GeeksforGeeks — Python -->
+    <div class="cert-card">
+      <a href="https://media.geeksforgeeks.org/courses/certificates/42c2b13e6f55febab85f277d930e19cf.pdf" target="_blank" rel="noopener" aria-label="Open GeeksforGeeks Python certificate (PDF)">
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GeeksforGeeks logo">
+        <h3>Python</h3>
+        <p>GeeksforGeeks</p>
+        <small>PDF certificate</small>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
