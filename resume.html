@@ -2,179 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Resume</title>
+  <title>ATS Resume </title>
   <style>
+    @page { size: A4; margin: 20mm; }
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      padding: 30px;
-    }
-    .resume-container {
-      background: #fff;
-      padding: 25px;
-      max-width: 800px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-    h1, h2 {
-      color: #2c3e50;
-      margin-top: 0;
-    }
-    p, li {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Certificates grid */
-    .certificates {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-top: 12px;
-    }
-    .cert-card {
-      border: 1px solid #e6e6e6;
-      border-radius: 10px;
-      padding: 12px;
-      text-align: center;
-      background: #fafafa;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .cert-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    }
-    .cert-card img {
-      width: 100%;
-      max-height: 96px;
-      object-fit: contain;
-      margin-bottom: 8px;
-      background: #fff;
-      border-radius: 8px;
-      padding: 6px;
-    }
-    .cert-card h3 {
-      font-size: 16px;
-      margin: 6px 0 2px;
-      color: #333;
-    }
-    .cert-card p {
-      font-size: 14px;
-      color: #666;
-      margin: 0 0 6px;
-    }
-    .cert-card small {
-      display: block;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.4;
+      color: #222;
       font-size: 12px;
-      color: #888;
     }
-    hr {
-      border: none;
-      border-top: 1px solid #eee;
-      margin: 16px 0 24px;
+    h1 { font-size: 24px; margin-bottom: 5px; }
+    h2 {
+      font-size: 16px;
+      margin-top: 15px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 2px;
     }
+    p { margin: 4px 0; }
+    ul { margin: 4px 0 8px 20px; }
+    .header { text-align: center; margin-bottom: 10px; }
+    .contact { font-size: 11px; color: #444; }
+    .section { margin-bottom: 10px; }
   </style>
 </head>
 <body>
 
-<div class="resume-container">
-  <h1>BHAVYASREE BEZAWADA</h1>
-  <p>Email: bezawadabbhavyasree@gmail.com | Phone: 924741XXXX</p>
-  <p>Location: Vijayawada, AP</p>
-  <p>GitHub:
-    <a href="https://github.com/Bhavya-sree123" target="_blank" rel="noopener">
-      github.com/Bhavya-sree123
-    </a>
-  </p>
-
-  <hr>
-
-  <h2>Career Objective</h2>
-  <p>
-    To gain practical experience in frontend development and contribute to meaningful student-focused projects while enhancing my skills in web technologies.
-  </p>
-
-  <h2>Education</h2>
-  <p><strong>B.Tech in CSE-AIML</strong><br>
-  SRK Institute of Technology, Vijayawada <br>
-  2nd Year | Expected Graduation: 2028</p>
-
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML5, CSS3, JavaScript (Basic)</li>
-    <li>Python, Java, C (Basics)</li>
-    <li>Responsive Design (Media Queries, Flexbox)</li>
-    <li>Git & GitHub (Beginner level)</li>
-  </ul>
-
-  <h2>Projects</h2>
-
-  <p><strong>1. To-Do List Web App</strong></p>
-  <ul>
-    <li>Built a task list app using HTML, CSS, and JavaScript</li>
-    <li>Allows adding, deleting, and marking tasks</li>
-    <li><a href="https://github.com/Bhavya-sree123/portfolio/blob/main/to-do-list.html" target="_blank" rel="noopener">GitHub Project Link</a></li>
-  </ul>
-
-  <p><strong>2. Portfolio Website</strong></p>
-  <ul>
-    <li>Created a personal portfolio with sections like About, Projects, and Resume</li>
-    <li>Styled with HTML/CSS and mobile responsive layout</li>
-    <li><a href="https://github.com/Bhavya-sree123/portfolio" target="_blank" rel="noopener">GitHub Project Link</a></li>
-  </ul>
-
-  <h2>Certificates</h2>
-  <div class="certificates">
-    <!-- Great Learning — HTML -->
-    <div class="cert-card">
-      <a href="https://www.mygreatlearning.com/certificate/IFGCRBVK" target="_blank" rel="noopener" aria-label="Open Great Learning HTML certificate">
-        <img loading="lazy" src="https://www.mygreatlearning.com/wp-content/themes/great-learning/images/logo.svg" alt="Great Learning logo">
-        <h3>HTML</h3>
-        <p>Great Learning</p>
-        <small>View issued certificate</small>
-      </a>
-    </div>
-    <!-- Great Learning — CSS -->
-    <div class="cert-card">
-      <a href="https://www.mygreatlearning.com/certificate/RPEVLOXQ" target="_blank" rel="noopener" aria-label="Open Great Learning CSS certificate">
-        <img loading="lazy" src="https://www.mygreatlearning.com/wp-content/themes/great-learning/images/logo.svg" alt="Great Learning logo">
-        <h3>CSS</h3>
-        <p>Great Learning</p>
-        <small>View issued certificate</small>
-      </a>
-    </div>
-    <!-- Great Learning — C Programming -->
-    <div class="cert-card">
-      <a href="https://www.mygreatlearning.com/certificate/IIAOPOXY" target="_blank" rel="noopener" aria-label="Open Great Learning C Programming certificate">
-        <img loading="lazy" src="https://www.mygreatlearning.com/wp-content/themes/great-learning/images/logo.svg" alt="Great Learning logo">
-        <h3>C Programming</h3>
-        <p>Great Learning</p>
-        <small>View issued certificate</small>
-      </a>
-    </div>
-    <!-- GeeksforGeeks — Python -->
-    <div class="cert-card">
-      <a href="https://media.geeksforgeeks.org/courses/certificates/42c2b13e6f55febab85f277d930e19cf.pdf" target="_blank" rel="noopener" aria-label="Open GeeksforGeeks Python certificate (PDF)">
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GeeksforGeeks logo">
-        <h3>Python</h3>
-        <p>GeeksforGeeks</p>
-        <small>PDF certificate</small>
-      </a>
-    </div>
+  <div class="header">
+    <h1>BhavyaSree Bezawada</h1>
+    <p class="contact">
+      Email:bezawadabbhavyasree@gmail.com | Phone: +91-9247417297 <br>
+      LinkedIn: linkedin.com/in/B.Bhavya sree | GitHub:github.com/bhavya-sree123
+    </p>
   </div>
 
+  <div class="section">
+    <h2>Professional Summary</h2>
+    <p>Computer Science student skilled in building responsive web pages and solving problems using Data Structures and Algorithms. Passionate about Artificial Intelligence, Machine Learning, and front-end development. Experienced in creating interactive projects and practical web applications with a focus on clean UI and usability.</p>
+  </div>
+
+  <div class="section">
+    <h2>Core Skills</h2>
+    <ul>
+      <li>Programming: Python, C, Java, JavaScript</li>
+      <li>Web Development: HTML, CSS, React, Node.js</li>
+      <li>Tools: Git, VS Code</li>
+      <li>Concepts: Data Structures, OOP, Machine Learning Basics</li>
+    </ul>
+  </div>
+  <div class="section">
+  <h2>Certifications & Skills</h2>
+  <p><b>Python Certification:</b> Gained strong programming fundamentals by building multiple programs, handling data, and performing basic data analysis using Python libraries.</p>
+  <p><b>HTML & CSS Certification:</b> Learned to create responsive, accessible, and visually appealing web pages with semantic HTML and clean CSS styling.</p>
+  <p><b>JavaScript Certification:</b> Developed interactive web applications, practiced DOM manipulation, event handling, and form validation to enhance user experience.</p>
 </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <p><b>Quiz App (HTML, CSS, JavaScript)</b> – Developed an interactive quiz with 20+ questions, timer, real-time answer validation, navigation buttons, and responsive design. Demonstrates front-end development and problem-solving skills.</p>
+    <p><b>Portfolio Website</b> – Built a personal portfolio with homepage, about section, projects showcase, and contact form. Focused on responsive design and user-friendly navigation without external frameworks.</p>
+    <p><b>Resume Builder Project</b> – Created an ATS-friendly resume using HTML and CSS, showcasing semantic HTML, clean formatting, and practical web development skills.</p>
+  </div>
+
+  <div class="section">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Participated in <b>Pixel to Page – 24 Hours Build Challenge</b></li>
+      <li>Participated in <b>CodeX – Crack the Code</b> competition</li>
+      <li>Participated in <b>Easy Writing Contest</b></li>
+    </ul>
+  </div>
 
 </body>
 </html>
