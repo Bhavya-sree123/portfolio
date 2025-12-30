@@ -1,90 +1,157 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Todo Application</title>
+
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f06, #4a90e2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: #fff;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
         }
+
         .container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
-        }
-        input[type="text"] {
-            width: calc(100% - 100px);
-            padding: 0.8rem;
+            width: 360px;
+            margin: 80px auto;
+            background: white;
+            padding: 20px;
             border-radius: 8px;
-            border: none;
-            outline: none;
-            font-size: 1rem;
-            margin-right: 1rem;
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
+
+        h2 {
+            text-align: center;
+            color: #7a2e2e;
+        }
+
+        .input-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            flex: 1;
+            padding: 8px;
+        }
+
         button {
-            padding: 0.8rem 1rem;
-            border-radius: 8px;
+            padding: 8px 12px;
+            background: #7a2e2e;
+            color: white;
             border: none;
-            background: #ff6b6b;
-            color: #fff;
-            font-size: 1rem;
             cursor: pointer;
-            transition: background 0.3s;
         }
+
         button:hover {
-            background: #ff4757;
+            opacity: 0.9;
         }
-        .todo {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            margin-top: 1rem;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            background: #f7f7f7;
+            padding: 8px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.8rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, background 0.3s;
         }
-        .todo:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.3);
-        }
-        .task {
-            flex: 1;
-            font-size: 1rem;
+
+        li span {
             cursor: pointer;
         }
-        .delete,
-        .edit {
-            cursor: pointer;
-            transition: transform 0.2s, color 0.3s;
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
         }
-        .delete:hover {
-            transform: scale(1.1);
-            color: #ff4757;
-        }
-        .edit:hover {
-            transform: scale(1.1);
-            color: #1e90ff;
-        }
-        svg {
-            fill: currentColor;
+
+        .actions button {
+            margin-left: 5px;
+            background: #444;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <input type="text" placeholder="Add a new task...">
-        <button>Add</button>
-        <div id="task-list"></div>
+
+<div class="container">
+    <h2>Todo Application</h2>
+
+    <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button onclick="addTask()">Add</button>
     </div>
+
+    <ul id="taskList"></ul>
+</div>
+
+<script>
+    // Load tasks from localStorage
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    const taskList = document.getElementById("taskList");
+
+    function displayTasks() {
+        taskList.innerHTML = "";
+
+        tasks.forEach((task, index) => {
+            const li = document.createElement("li");
+
+            li.innerHTML = `
+                <span class="${task.completed ? 'completed' : ''}"
+                      onclick="toggleComplete(${index})">
+                    ${task.text}
+                </span>
+                <div class="actions">
+                    <button onclick="editTask(${index})">Edit</button>
+                    <button onclick="deleteTask(${index})">Delete</button>
+                </div>
+            `;
+
+            taskList.appendChild(li);
+        });
+
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
+    function addTask() {
+        const taskInput = document.getElementById("taskInput");
+        const taskText = taskInput.value.trim();
+
+        if (taskText === "") {
+            alert("Please enter a task");
+            return;
+        }
+
+        tasks.push({ text: taskText, completed: false });
+        taskInput.value = "";
+        displayTasks();
+    }
+
+    function deleteTask(index) {
+        tasks.splice(index, 1);
+        displayTasks();
+    }
+
+    function editTask(index) {
+        const newTask = prompt("Edit task:", tasks[index].text);
+        if (newTask !== null && newTask.trim() !== "") {
+            tasks[index].text = newTask;
+            displayTasks();
+        }
+    }
+
+    function toggleComplete(index) {
+        tasks[index].completed = !tasks[index].completed;
+        displayTasks();
+    }
+
+    // Initial load
+    displayTasks();
+</script>
+
 </body>
 </html>
